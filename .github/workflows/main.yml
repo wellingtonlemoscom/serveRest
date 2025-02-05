@@ -14,10 +14,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-test:
-  runs-on: ubuntu-latest
-  needs: build
-  steps:
-    - uses: actions/checkout@v3
-    - name: Build do Gradle e Run Tests
-      run: ./gradlew smokeTest
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build do Gradle e Run Tests
+        run: ./gradlew smokeTest
